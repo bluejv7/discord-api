@@ -47,7 +47,7 @@ class Discord {
     }
 
     _handleError(error) {
-        console.error(`Error: ${error}`);
+        console.error(`API Error: ${error}`);
         throw(error);
     }
 }
