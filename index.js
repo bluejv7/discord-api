@@ -33,6 +33,8 @@ class Discord {
             headers: {
                 Authorization: this.authToken
             }
+        }).catch(error => {
+            this._handleError(error);
         });
     }
 
@@ -42,6 +44,11 @@ class Discord {
                 Authorization: this.authToken
             }
         });
+    }
+
+    _handleError(error) {
+        console.error(`Error: ${error}`);
+        throw(error);
     }
 }
 
